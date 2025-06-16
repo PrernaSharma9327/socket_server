@@ -32,7 +32,7 @@ io.on("connection", (socket) => {
     console.log("Incoming call request:", data);
     const doctorSocket = users["doctor"];
     if (doctorSocket) {
-      io.to(doctorSocket).emit("incoming_call", data);
+      io.to(doctorSocket).emit("user_calling", data);
     }
   });
 
